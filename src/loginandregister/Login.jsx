@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import styles from "./login.module.css";
+import Failedpopup from "./Failedpopup";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -8,6 +9,7 @@ export default function Login() {
   const [registering, isRegistering] = useState(false);
   const [loginbtn, pressloginbtn] = useState(false);
   const [registerbtn, pressregisterbtn] = useState(false);
+  const [loginSuccess, setloginSuccess] = useState(true);
 
   function handleLogin(e) {
     e.preventDefault();
@@ -18,10 +20,9 @@ export default function Login() {
     fData.append("loginbtn", loginbtn);
     axios
       .post(url, fData)
-      .then((response) => console.log(response))
+      .then((responce) => console.log(responce))
       .catch((error) => console.log(error));
-
-    console.log(registering ? "Register Pushed" : "Login Pushed");
+    console.log(loginSuccess);
   }
   function handleRegister(e) {
     e.preventDefault();
@@ -32,7 +33,7 @@ export default function Login() {
     fData.append("registerbtn", registerbtn);
     axios
       .post(url, fData)
-      .then((response) => console.log(response))
+      .then((responce) => console.log(responce))
       .catch((error) => console.log(error));
 
     console.log(registering ? "Register Pushed" : "Login Pushed");
@@ -48,6 +49,7 @@ export default function Login() {
   }
   return (
     <>
+      <Failedpopup loginSuccess={loginSuccess} />
       <div
         style={{ backgroundImage: `url('./images/img6.webp')` }}
         className={styles.loginregistercontainer}
@@ -89,7 +91,7 @@ export default function Login() {
             </button>
 
             <a className={styles.reglink} onClick={() => gotoRegister()}>
-              Dont have an Account Yet?
+              {registering ? "I Already Have An Account" : "Create an Account"}
             </a>
           </form>
         </div>
@@ -97,3 +99,5 @@ export default function Login() {
     </>
   );
 }
+
+// (response) =>
