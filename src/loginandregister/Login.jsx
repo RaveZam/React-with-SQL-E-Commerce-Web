@@ -3,20 +3,48 @@ import { useState } from "react";
 import styles from "./login.module.css";
 
 export default function Login() {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [registering, isRegistering] = useState(false);
+  const [loginbtn, pressloginbtn] = useState(false);
+  const [registerbtn, pressregisterbtn] = useState(false);
 
-  function handleClick(e) {
+  function handleLogin(e) {
     e.preventDefault();
-    console.log("pushed");
     const url = "http://localhost/reactdatabase/index.php";
     let fData = new FormData();
     fData.append("username", username);
     fData.append("password", password);
+    fData.append("loginbtn", loginbtn);
     axios
       .post(url, fData)
-      .then((response) => alert(response.data))
-      .catch((error) => alert(error));
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+
+    console.log(registering ? "Register Pushed" : "Login Pushed");
+  }
+  function handleRegister(e) {
+    e.preventDefault();
+    const url = "http://localhost/reactdatabase/index.php";
+    let fData = new FormData();
+    fData.append("username", username);
+    fData.append("password", password);
+    fData.append("registerbtn", registerbtn);
+    axios
+      .post(url, fData)
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+
+    console.log(registering ? "Register Pushed" : "Login Pushed");
+    setUsername("");
+    setPassword("");
+  }
+
+  function gotoRegister() {
+    setUsername("");
+    setPassword("");
+    isRegistering(!registering);
+    console.log(registering);
   }
   return (
     <>
@@ -24,7 +52,11 @@ export default function Login() {
         style={{ backgroundImage: `url('./images/img6.webp')` }}
         className={styles.loginregistercontainer}
       >
-        <div className={styles.formcontainer}>
+        <div
+          className={`${styles.logincontainer} ${
+            registering ? styles.registercontainer : ""
+          }`}
+        >
           <form className={styles.form} action="">
             <h1 className={styles.title1}>Welcome To</h1>
             <h1 className={styles.title2}>Urban Space</h1>
@@ -32,27 +64,33 @@ export default function Login() {
               Username
             </label>
             <input
+              value={username}
               className={styles.input}
               onChange={(e) => setUsername(e.target.value)}
               type="text"
-              value={username}
             />
             <label className={styles.label} htmlFor="">
               Password
             </label>
             <input
+              value={password}
               className={styles.input}
               onChange={(e) => setPassword(e.target.value)}
               type="text"
-              value={password}
             />
             <button
               className={styles.loginbtn}
-              onClick={(e) => handleClick(e)}
+              onClick={(e) =>
+                registering ? handleRegister(e) : handleLogin(e)
+              }
               type="submit"
             >
-              Login
+              {registering ? "Register" : "Login"}
             </button>
+
+            <a className={styles.reglink} onClick={() => gotoRegister()}>
+              Dont have an Account Yet?
+            </a>
           </form>
         </div>
       </div>
