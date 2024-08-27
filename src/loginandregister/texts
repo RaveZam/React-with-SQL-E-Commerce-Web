@@ -1,3 +1,153 @@
+66. Library Systems
+
+- Library systems are responsible for cataloging and circulation.
+- We are modernizing our library systems to increase efficiency.
+
+67. Metadata Standards
+
+- Metadata standards ensure consistency in data description.
+- We use metadata standards to increase data interchange.
+
+68. Patron
+
+- The patron checked out several books from the library.
+- Patrons can request new titles for the library's collection.
+
+69. Preservation Technology
+
+- Preservation technology improves the condition of antique books.
+- We use preservation technologies to scan fragile documents.
+
+70. Public Library
+
+- The public library provides free access to books and resources.
+- The public library offers community events and courses.
+
+71. special library
+
+- I work as a special librarian in a company.
+- what a special library/ies contains is always specific.
+
+72. rare books
+
+- The rare books collection features first editions and historical manuscripts.
+- Rare books are stored in a secure, climate-controlled area.
+
+73. Reader services help locate and recommend books. - The library's reader services team is ready for specialized assistance.
+
+74. reference services
+    -Reference services offer thorough information and research support. - We provide reference services to assist users with detailed inquiries.
+
+75.- Remote access allows customers to access the library's digital resources from home.
+
+- She used remote access to retrieve a journal article from the library.
+
+76. Special Collections.
+
+- Special collections include unique and precious materials such as manuscripts and archives
+- Researchers can use the library's special collections by appointment.
+
+  77.- Stack management entails organizing and maintaining bookshelves.
+
+- Effective stack management makes books easily accessible.
+
+78. Subject Headings
+
+- Subject headings organize books and articles by topic. - We changed the subject titles to increase search accuracy.
+
+79. user experience
+    -User Experience focuses on increasing patron interactions with library systems.
+
+- We are redesigning the website to improve the user experience.
+
+80. Workflow
+    -the workflow inside our campus library is very smooth and organized.
+
+- We optimized the workflow to increase the efficiency of book checkouts.
+
+81. Web Search
+
+- Users can use web search technologies to find information online.
+- The library provides web search resources to help with research.
+
+82. access controls
+
+- Access control systems determine who has access
+  to or uses specific library resources.
+- We installed access controls inside the library.
+
+83. archive management
+
+- the archive management has a big help especially into libraries.
+- Effective archive management ensures records are accessible for the long term.
+
+84. facilitators
+    -The facilitator oversaw the workshop on using library resources.
+
+- A facilitator always check the inside and what are the needs inside the library.
+
+85. Circulation Desk
+
+- The circulation desk is where books are checked out and returned.
+- She went to the Circulation Desk to renew her library books.
+
+86. Collection development
+
+- Collection development focuses on the acquisition and maintenance of library materials.
+- Collection development ensures that the library's holdings match user demands.
+
+87. Competition Catalog
+
+- The electronic catalog allows users to look up books online.
+- the faculty pdated the competition catalogue.
+
+88. content management
+    -Content management entails organizing and preserving digital resources.
+
+- The library employs content management systems to handle its online resources.
+
+89. Cooperative Catalog
+
+- Cooperative cataloging enables libraries to share and standardize records.
+- We take part in cooperative cataloging to increase resource discovery.
+
+90. database indexing
+
+- Database indexing improves search query performance by structuring data.
+- We're enhancing database indexing to improve search performance.
+
+91. indexing
+
+- Doc indexing entails developing searchable keywords for files.
+- Effective document indexing enhances the retrieval of research materials.
+
+92. Digital preservation.
+
+- Digital preservation ensures that electronic records are accessible over time.
+- We are developing digital preservation solutions for archives articles.
+
+93. information Retrieval
+
+- Information retrieval focuses on discovering useful data from databases.
+- The library's information retrieval system assists users in finding the information they need.
+
+94. Knowledge management entails capturing and disseminating corporate expertise. - We employ knowledge management to enhance information access and utilization.
+95. Metadata Creation entails adding descriptive information to digital assets. - Create accurate metadata to improve resource discoverability.
+96. The online catalog enables users to look for books and materials from anywhere. - We modified the online catalog to improve the user experience and search capabilities.
+97. Ref. Reference resources include dictionaries, encyclopedias, and other research aids. - The library provides a variety of reference tools to help with academic work.
+98. Research databases provide access to academic articles.
+
+99. Resource Share
+
+- Resource sharing involves exchanging materials between libraries.
+- The library participates in programs
+
+100. school Library
+
+- The school library supports
+  students and teachers with books and many resources.
+- The school library faculties and blis students always organize the books so well.
+
 name = $_POST["username"];
         $password = $_POST["password"];   
         $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
