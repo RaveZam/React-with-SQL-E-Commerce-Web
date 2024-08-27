@@ -59,13 +59,20 @@ export default function Login() {
       .post(url, fData)
       .then((responce) => {
         if (responce.data.status === "emailavail") {
-          // setregisterSuccess(true);
+          setregisterSuccess(true);
           console.log("Email Avail");
         } else if (responce.data.status === "emailtaken") {
           console.log("emailtaken");
-        } else if (responce.data.status === "invalidemail")
+        } else if (responce.data.status === "invalidemail") {
           console.log("invalidemail");
-        setinvalidEmail(true);
+          setinvalidEmail(true);
+        } else if (responce.data.status === "weakpassword") {
+          console.log("weakpassword");
+        } else if (responce.data.status === "strongpassword") {
+          console.log("weakpassword");
+        } else if (responce.data.status === "registersuccess") {
+          console.log("registersuccess");
+        }
       })
       .catch((error) => console.log(error));
     setUsername("");
