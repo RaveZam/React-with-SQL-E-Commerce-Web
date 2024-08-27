@@ -97,3 +97,26 @@
   color: rgba(255, 255, 255, 0.684);
   cursor: pointer;
 }
+
+.errormsg {
+  color: rgb(201, 11, 11);
+  font-weight: 300;
+  white-space: nowrap;
+  display: none;
+}
+
+.showerrormsg {
+  display: block;
+}
+.showemptymsg {
+  display: block;
+}
+
+.showregsuccess {
+  display: block;
+  color: rgba(244, 244, 244, 0.671);
+}
+
+.showinvalidemail {
+  display: block;
+}

@@ -1,0 +1,2022 @@
+name = $_POST["username"];
+        $password = $_POST["password"];   
+        $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+$sql = "INSERT INTO users (username,password) VALUES('$name','$hashedpassword')";
+         $result = mysqli_query($conn, $sql);
+        if($result){
+echo json_encode([
+"status"=> "registersuccess",
+]);
+}else{
+echo json_encode([
+"status"=> "registerfailed",
+]);
+}
+
+}
+
+1. Acquisition
+2. Access
+3. Archives
+4. Bibliography
+5. Bibliometrics
+6. Book
+7. Catalog
+8. Cataloging
+9. Classification
+10. Collection
+11. Circulation
+12. Conservation
+13. Copyright
+14. Database
+15. Dewey
+16. Digital
+17. Ebook
+18. Electronic
+19. Encyclopedia
+20. Index
+21. Info
+22. Inquiry
+23. Interlibrary
+24. Journal
+25. Keywords
+26. Lending
+27. Library
+28. Librarian
+29. Manuscript
+30. data
+31. Microform
+32. Periodical
+33. Preservation
+34. Query
+35. Reference
+36. Repository
+37. Research
+38. Logbook
+39. Shelf
+40. Stack
+41. Thesis
+42. Title
+43. User
+44. Abstract
+45. Authentication
+46. Call No.
+47. Card Catalog
+48. Citation
+49. Class Scheme
+50. Community
+51. Cooperation
+52. Awareness
+53. DB Mgmt
+54. Digital Lib
+55. Digitalization
+56. Doc Delivery
+57. Doc Mgmt
+58. E-resource
+59. Encyclopedic
+60. Expenditure
+61. Findings
+62. Holdings
+63. Workloads
+64. Knowledge Base
+65. Lib Science
+66. Lib Systems
+67. Metadata Std
+68. Patron
+69. Preserv. Tech
+70. Public Lib
+71. Query Mgmt
+72. Rare Books
+73. Reader Svc
+74. Ref. Svc
+75. Remote Access
+76. Special Coll.
+77. Stack Mgmt
+78. Subject Hdgs
+79. User Exp.
+80. Workflow
+81. Web Search
+82. Access Ctrl
+83. Archive Mgmt
+84. Facilitator
+85. Circ. Desk
+86. Coll. Dev.
+87. Comp. Catalog
+88. Content Mgmt
+89. Coop. Catalog
+90. DB Indexing
+91. Doc Indexing
+92. Digital Preserv.
+93. Info Retrieval
+94. Knowledge Mgmt
+95. Metadata Creation
+96. Online Catalog
+97. Ref. Tools
+98. Research DBs
+99. Resource Share
+100. School Lib
+101. Subject Analysis
+102. Sys Admin
+103. User Ed.
+104. Virtual Lib
+105. Bookmobile
+106. Catalog Rec.
+107. Class System
+108. Data Entry
+109. Office
+110. Info Literacy
+111. Interlib. Exch.
+112. Lib Automation
+113. Lib Operations
+114. Lib Planning
+115. Online Res.
+116. PAC
+117. Scholarly Res.
+118. Serial Coll.
+119. Special Svc
+120. Sys Analysis
+121. User Interface
+122. Web Res.
+123. Access Rights
+124. Archive Retrieval
+125. Book Coll.
+126. Catalog Mgmt
+127. Coll. Eval.
+128. Comm. Outreach
+129. Data Coll.
+130. Digital Archives
+131. Digital Catalog
+132. Doc Retrieval
+133. E-Items
+134. Info Systems
+135. ILS
+136. Lib Policies
+137. Lib Resources
+138. Metadata Std
+139. Online DB
+140. Patron Svc
+141. Preserv. Policies
+142. Ref. Materials
+143. Remote DB
+144. Resource Mgmt
+145. Retrieval Sys
+146. Stat. Analysis
+147. Tech Svc
+148. User Assess.
+149. Web Catalog
+150. Access Mgmt
+151. Bibliographic DB
+152. Book Storage
+153. Catalog Rec.
+154. Coll. Mgmt
+155. Data Retrieval
+156. Doc Preserv.
+157. E-Catalog
+158. Info Svc
+159. Lib Design
+160. Technical
+161. Online Cataloging
+162. Research Support
+163. Sys Design
+164. Web Res.
+165. Archive Preserv.
+166. Bibliographic Rec.
+167. Coll. Dev.
+168. Data Mgmt
+169. Digital Content
+170. Doc Mgmt
+171. Info Access
+172. Interlib. Ref.
+173. Lib Cataloging
+174. Lib Holdings
+175. Patron Rec.
+176. Ref. Mgmt
+177. Research Tools
+178. Resource Alloc.
+179. Scholarly Comm.
+180. Bookworm
+181. Stat. Reports
+182. Tech Support
+183. Client.
+184. Web Dev.
+185. Access Policy
+186. Bibliographic Tools
+187. Catalog Std.
+188. Coll. Eval.
+189. Data Analysis
+190. ERM
+191. Info Tech
+192. Lib Auto. Sys.
+193. Metadata Mgmt
+194. Online Search
+195. Resource Planning
+196. Shelf Mgmt
+197. Special Libs
+198. Sys Integration
+199. User Training
+200. Web Svc
+201. Access Svc
+202. Bibliographic Ctrl
+203. Catalog DB
+204. Coll. Policies
+205. Digital Libs
+206. Doc Delivery Svc
+207. Info Sources
+208. Lib Holdings Mgmt
+209. Metadata Cataloging
+210. Online Ref.
+211. Public Lib Svc
+212. Remote Access Sys
+213. Scholarly Res.
+214. Sys Config.
+215. User Assist.
+216. Web Cataloging
+217. Archive Mgmt
+218. Bibliographic DB Mgmt
+219. Book Selection
+220. Catalog Rec. Mgmt
+221. Bar Code No.
+222. CDs
+223. Poll No.
+224. Overhead Scanner
+225. Session Rec.
+226. Microfilm
+227. Serial No.
+228. Overhead Projector
+229. Dictionary
+230. Almanac
+231. Journals
+232. Borrower’s Card
+233. Book Pocket
+234. Book Card
+235. Book Shelves
+236. Lost
+237. Charge/Fees
+238. Vertical File
+239. Indexing
+240. List
+241. Fiction Material
+242. OPAC
+243. Coll. Mgmt
+244. Inventory
+245. Coll. Dev.
+246. Baggage Area
+247. Shelve Reading
+248. Recording
+249. Weeding
+250. Resources
+251. Lib DB
+252. E-books
+253. Open Access Res.
+254. E-Journal
+255. Referral Letter
+256. Thesis
+257. Globe (Map)
+258. Reading Area
+259. Unpublished Material
+260. Published Material
+261. Microfiche
+262. Shelve Place
+263. Card Catalog
+264. Lending Area
+265. Charging Desk
+266. Info Pros.
+267. Class Systems
+268. Gen. Coll.
+269. Filipiniana Sec.
+270. Mech. Proc. of Books
+271. Mech. Proc.
+272. Collating
+273. Encoding
+274. Labels
+275. Frequency
+276. Data
+277. Location Symbol
+278. Intervals
+279. Newspaper
+280. Annual
+281. Encyclopedia
+282. Catalogue Card
+283. Shelf
+284. Magazine Rack
+285. Serial Sec.
+286. Periodicals
+287. Pamphlet
+288. Flyers
+289. Newspaper Clippings
+290. Ref. Sec.
+291. Atlas
+292. Gazette
+293. Guide
+294. Discovery
+295. Digitization
+296. Evaluation
+297. Holdings
+298. Integration
+299. Interface
+300. Knowledge
+301. Learning
+302. Mgmt
+303. Metadata
+304. Navigation
+305. Organization
+306. Policies
+307. Processing
+308. Programming
+309. Retrieval
+310. Svc
+311. Standards
+312. Support
+313. Training
+314. Usage
+315. Fine
+316. Store
+317. Doc.
+318. Binding
+319. Feedback
+320. Research
+321. Visualization
+322. Digital Archives
+323. Assessment
+324. Allocation
+325. Updates
+326. Profiles
+327. Records
+328. Repair
+329. Maintenance
+330. Retrieval
+331. App
+332. Outreach
+333. Recordkeeping
+334. Updating
+335. Digital Access
+336. Practices
+337. Preservation
+338. Assistance
+339. Flow
+340. Utilization
+341. Enhancement
+342. Analysis
+343. Selection
+344. Support
+345. Planning
+346. Review
+347. Interaction
+348. Handling
+349. Inquiry
+350. Distribution
+351. Documentation
+352. Maintenance
+353. Engagement
+354. Strategies
+355. Archiving
+356. Procedures
+357. Technology
+358. Control
+359. Accessibility
+360. Methods
+361. Solutions
+362. Implementation
+363. Curation
+364. Steps
+365. Tech.
+366. Improvement
+367. Guidelines
+368. Review
+369. Practices
+370. Techniques
+371. Enhancement
+372. Solutions
+373. Shelving
+374. Systems
+375. Entry
+376. Development
+377. Academic Journal
+378. Author
+379. Authentication
+380. Folio
+381. Article
+382. Virtual Ref.
+383. Adaptive Tech
+384. Blog
+385. Citation Styles
+386. ID (Identification)
+387. Plagiarism
+388. Audio-Visual
+389. Films
+390. Repository
+391. PDF
+392. Fair-Use Guide
+393. Module
+394. Design
+395. Abstracting
+396. Range
+397. Accessioning
+398. Technical Works
+399. Preparation of Books
+400. Stamping
+401. School Ownership
+402. Work
+403. Attendance
+404. Logbook
+405. Baggage
+406. Masteral
+407. Borrowers
+408. Indigenous
+409. Staff
+410. Reminders
+411. Announcement
+412. Marker
+413. Laborary Code
+414. Uploading
+415. Sending
+416. Facilities
+417. Reserving
+418. Data Gathering
+419. Research Analysis
+420. Online System
+421. Memo
+422. Reminders
+423. Admin Announcement
+424. Concordance
+425. Reference Guides
+426. Abstracting
+427. Borrower’s Guidelines
+428. Research Reference
+429. Staff Work Area
+430. Research Output
+431. Reading List
+432. Retrieval
+433. Online Database
+434. Librarian’s Desk
+435. Reference Research
+436. Bookbinding
+437. Book Clipping
+438. Flyers
+439. Organizer
+440. Bulletin Board
+441. Display Cases
+442. Research Method
+443. Staff Duty
+444. Staff Memo
+445. Subject Analysis
+446. Library Staff
+447. Communication
+448. Theses
+449. Online Resources
+450. Lending Counter
+451. Rare Books
+452. Metadata
+453. Archives
+454. Tag
+455. Manuscripts
+456. E-journals
+457. Book Scanning
+458. Convert
+459. Info Retrieval
+460. Book Loans
+461. Data Sets
+462. Online Access
+463. Abstracts
+464. Full Text
+465. ePub
+466. Interlibrary Loan
+467. MARC Records
+468. Online Reserves
+469. Copy Cataloging
+470. Lib Services
+471. Research Databases
+472. Digital Content
+473. Video Archives
+474. Document Delivery
+475. Course Reserves
+476. Lib Guides
+477. Dissertation
+478. Proxy Server
+479. Research Tools
+480. Assist
+481. Repository
+482. Digital Bookshelf
+483. Reading Room
+484. Study Rooms
+485. Book Fair
+486. Library Card
+487. Book Plate
+488. Open Shelving
+489. Closed Stacks
+490. Document Viewer
+491. Online Forms
+492. Book Repairs
+493. Data Migration
+494. Information Desk
+495. Research Station
+496. Virtual Tour
+497. E-newsletters
+498. Digital Repository
+499. Research Grant
+500. Digital Journals
+501. Book Exhibit
+502. Archives Online
+503. Historical Records
+504. Newspaper Archive
+505. Preservation Lab
+506. Oral History
+507. Electronic Journal
+508. Research Lab
+509. Reading List
+510. Special Collections
+511. Textbook Reserve
+512. Library Website
+513. E-reference
+514. Borrowing Privileges
+515. Info Literacy
+516. Academic Library
+517. Library Science
+518. Tech Services
+519. Metadata Creation
+520. System Migration
+521. Authority Control
+522. Lib Mgmt Systems
+523. Scholarly Articles
+524. Research Consultation
+525. Metadata Standards
+526. Database Management
+527. Online Journals
+528. Academic Resources
+529. Library Planning
+530. Lib Tech
+531. User Feedback
+532. Lib Assessment
+533. Database Search
+534. Collection Development
+535. E-books
+536. Patron Records
+537. User Experience
+538. Preservation Methods
+539. Digital Library
+540. Course Materials
+541. Data Curation
+542. E-resources
+543. Digital Cataloging
+544. Metadata Records
+545. User Data
+546. Collection Policies
+547. Scholarly Resources
+548. User Registration
+549. Tech Support
+550. Online Reserves
+551. Library Systems
+552. Collection Review
+553. Borrower’s Card
+554. Scholarly Research
+555. User Policies
+556. Digital Preservation
+557. Reading Room
+558. Study Carrels
+559. Electronic Access
+560. Database Services
+561. Digital Reference
+562. Online Journals
+563. Reference Materials
+564. Library Use
+565. Book Check-out
+566. Electronic Catalog
+567. Digital Resources
+568. Metadata Repositories
+569. Open Access
+570. Web Resources
+571. Library Search
+572. Academic Research
+573. Book Scanning
+574. Digital Collections
+575. Special Services
+576. Library Archives
+577. Database Retrieval
+578. Study Materials
+579. User Accounts
+580. User Authentication
+581. Book Reservation
+582. Library Catalog
+583. Patron Services
+584. Digital Formats
+585. Reference Desk
+586. Library Rules
+587. Study Guides
+588. Research Databases
+589. Catalog Maintenance
+590. Online Catalog
+591. User Surveys
+592. Data Backup
+593. Study Groups
+594. Virtual Library
+595. Preservation Tools
+596. Access Codes
+597. Online Texts
+598. Library Handbook
+599. Borrowing Guidelines
+600. User Manuals
+601. Digital Files
+602. Database Query
+603. Collection Inventory
+604. Virtual Resources
+605. Study Guides
+606. User Privileges
+607. Library Map
+608. Special Exhibits
+609. Borrower Guidelines
+610. Access Logs
+611. Reference Lists
+612. Document Archives
+613. Study Area
+614. Library Guides
+615. User Policies
+616. Catalog Updates
+617. Borrowing Records
+618. Collection Reviews
+619. Data Protection
+620. Online Loans
+621. Research Papers
+622. Digital Storage
+623. User Support
+624. Metadata Entry
+625. Study Resources
+626. Virtual Visits
+627. Digital Exhibits
+628. User ID
+629. Library Databases
+630. Catalog Browsing
+631. User Reports
+632. Data Entry
+633. User Feedback
+634. Library Tech
+635. Online Study
+636. Digital Platforms
+637. Metadata Services
+638. Collection Analysis
+639. User Groups
+640. Study Notes
+641. Library Collection
+642. Digital Materials
+643. Research Library
+644. Library Media
+645. Online Learning
+646. Digital Outputs
+647. Special Features
+648. User Interaction
+649. Study Resources
+650. User Forms
+651. Virtual Meetings
+652. Digital Editions
+653. Online Workshops
+654. Research Data
+655. User Logs
+656. Library Orientation
+657. Metadata Reports
+658. Research Journals
+659. User Research
+660. Library Workshops
+661. Metadata Workshops
+662. Digital Workshops
+663. Special Courses
+664. User Programs
+665. Research Workshops
+666. Library Programs
+667. Metadata Programs
+668. Digital Programs
+669. Special Sessions
+670. User Training
+671. Research Training
+672. Metadata Training
+673. Digital Training
+674. Special Instruction
+675. User Instruction
+676. Research Instruction
+677. Metadata Instruction
+678. Digital Instruction
+679. Special Lectures
+680. User Lectures
+681. Research Lectures
+682. Metadata Lectures
+683. Digital Lectures
+684. Special Presentations
+685. User Presentations
+686. Research Presentations
+687. Metadata Presentations
+688. Digital Presentations
+689. Special Demonstrations
+690. User Demonstrations
+691. Research Demonstrations
+692. Metadata Demonstrations
+693. Digital Demonstrations
+694. Special Exhibitions
+695. User Exhibitions
+696. Research Exhibitions
+697. Metadata Exhibitions
+698. Digital Exhibitions
+699. Special Events
+700. User Events
+701. Research Events
+702. Metadata Events
+703. Digital Events
+704. Special Talks
+705. User Talks
+706. Research Talks
+707. Metadata Talks
+708. Digital Talks
+709. Special Tours
+710. User Tours
+711. Research Tours
+712. Metadata Tours
+713. Digital Tours
+714. Special Discussions
+715. User Discussions
+716. Research Discussions
+717. Metadata Discussions
+718. Digital Discussions
+719. Special Debates
+720. User Debates
+721. Research Debates
+722. Metadata Debates
+723. Digital Debates
+724. Special Panels
+725. User Panels
+726. Research Panels
+727. Metadata Panels
+728. Digital Panels
+729. Special Reviews
+730. User Reviews
+731. Research Reviews
+732. Metadata Reviews
+733. Digital Reviews
+734. Special Interviews
+735. User Interviews
+736. Research Interviews
+737. Metadata Interviews
+738. Digital Interviews
+739. Special Updates
+740. User Updates
+741. Research Updates
+742. Metadata Updates
+743. Digital Updates
+744. Special Announcements
+745. User Announcements
+746. Research Announcements
+747. Metadata Announcements
+748. Digital Announcements
+749. Special Briefs
+750. User Briefs
+751. Research Briefs
+752. Metadata Briefs
+753. Digital Briefs
+754. Special Summaries
+755. User Summaries
+756. Research Summaries
+757. Metadata Summaries
+758. Digital Summaries
+759. Special Alerts
+760. User Alerts
+761. Research Alerts
+762. Metadata Alerts
+763. Digital Alerts
+764. Special Newsletters
+765. User Newsletters
+766. Research Newsletters
+767. Metadata Newsletters
+768. Digital Newsletters
+769. Special Bulletins
+770. User Bulletins
+771. Research Bulletins
+772. Metadata Bulletins
+773. Digital Bulletins
+774. Special Reports
+775. User Reports
+776. Research Reports
+777. Metadata Reports
+778. Digital Reports
+779. Special Surveys
+780. User Surveys
+781. Research Surveys
+782. Metadata Surveys
+783. Digital Surveys
+784. Special Forms
+785. User Forms
+786. Research Forms
+787. Metadata Forms
+788. Digital Forms
+789. Special Sheets
+790. User Sheets
+791. Research Sheets
+792. Metadata Sheets
+793. Digital Sheets
+794. Special Lists
+795. User Lists
+796. Research Lists
+797. Metadata Lists
+798. Digital Lists
+799. Special Tables
+800. User Tables
+801. Research Tables
+802. Metadata Tables
+803. Digital Tables
+804. Special Charts
+805. User Charts
+806. Research Charts
+807. Metadata Charts
+808. Digital Charts
+809. Special Maps
+810. User Maps
+811. Research Maps
+812. Metadata Maps
+813. Digital Maps
+814. Special Diagrams
+815. User Diagrams
+816. Research Diagrams
+817. Metadata Diagrams
+818. Digital Diagrams
+819. Special Graphs
+820. User Graphs
+821. Research Graphs
+822. Metadata Graphs
+823. Digital Graphs
+824. Special Plots
+825. User Plots
+826. Research Plots
+827. Metadata Plots
+828. Digital Plots
+829. Special Drafts
+830. User Drafts
+831. Research Drafts
+832. Metadata Drafts
+833. Digital Drafts
+834. Special Notes
+835. User Notes
+836. Research Notes
+837. Metadata Notes
+838. Digital Notes
+839. Special Findings
+840. User Findings
+841. Research Findings
+842. Metadata Findings
+843. Digital Findings
+844. Special Records
+845. User Records
+846. Research Records
+847. Metadata Records
+848. Digital Records
+849. Special Entries
+850. User Entries
+851. Research Entries
+852. Metadata Entries
+853. Digital Entries
+854. Special Citations
+855. User Citations
+856. Research Citations
+857. Metadata Citations
+858. Digital Citations
+859. Special References
+860. User References
+861. Research References
+862. Metadata References
+863. Digital References
+864. Special Inquiries
+865. User Inquiries
+866. Research Inquiries
+867. Metadata Inquiries
+868. Digital Inquiries
+869. Special Responses
+870. User Responses
+871. Research Responses
+872. Metadata Responses
+873. Digital Responses
+874. Special Solutions
+875. User Solutions
+876. Research Solutions
+877. Metadata Solutions
+878. Digital Solutions
+879. Special Answers
+880. User Answers
+881. Research Answers
+882. Metadata Answers
+883. Digital Answers
+884. Special Conclusions
+885. User Conclusions
+886. Research Conclusions
+887. Metadata Conclusions
+888. Digital Conclusions
+889. Special Endnotes
+890. User Endnotes
+891. Research Endnotes
+892. Metadata Endnotes
+893. Digital Endnotes
+894. Special Comments
+895. User Comments
+896. Research Comments
+897. Metadata Comments
+898. Digital Comments
+899. Special Feedback
+900. User Feedback
+901. Research Feedback
+902. Metadata Feedback
+903. Digital Feedback
+904. Special Evaluations
+905. User Evaluations
+906. Research Evaluations
+907. Metadata Evaluations
+908. Digital Evaluations
+909. Special Critiques
+910. User Critiques
+911. Research Critiques
+912. Metadata Critiques
+913. Digital Critiques
+914. Special Overviews
+915. User Overviews
+916. Research Overviews
+917. Metadata Overviews
+918. Digital Overviews
+919. Special Overhauls
+920. User Overhauls
+921. Research Overhauls
+922. Metadata Overhauls
+923. Special Revisions
+924. User Revisions
+925. Research Revisions
+926. Metadata Revisions
+927. Digital Revisions
+928. Special Rechecks
+929. User Rechecks
+930. Research Rechecks
+931. Metadata Rechecks
+932. Digital Rechecks
+933. Special Verifications
+934. User Verifications
+935. Research Verifications
+936. Metadata Verifications
+937. Digital Verifications
+938. Special Confirmations
+939. User Confirmations
+940. Research Confirmations
+941. Metadata Confirmations
+942. Digital Confirmations
+943. Special Approvals
+944. User Approvals
+945. Research Approvals
+946. Metadata Approvals
+947. Digital Approvals
+948. Special Authorizations
+949. User Authorizations
+950. Research Authorizations
+951. Metadata Authorizations
+952. Digital Authorizations
+953. Special Consents
+954. User Consents
+955. Research Consents
+956. Metadata Consents
+957. Digital Consents
+958. Special Permits
+959. User Permits
+960. Research Permits
+961. Metadata Permits
+962. Digital Permits
+963. Special Grants
+964. User Grants
+965. Research Grants
+966. Metadata Grants
+967. Digital Grants
+968. Special Clearances
+969. User Clearances
+970. Research Clearances
+971. Metadata Clearances
+972. Digital Clearances
+973. Special Sanctions
+974. User Sanctions
+975. Research Sanctions
+976. Metadata Sanctions
+977. Digital Sanctions
+978. Special Waivers
+979. User Waivers
+980. Research Waivers
+981. Metadata Waivers
+982. Digital Waivers
+983. Special Provisions
+984. User Provisions
+985. Research Provisions
+986. Metadata Provisions
+987. Digital Provisions
+988. Special Amendments
+989. User Amendments
+990. Research Amendments
+991. Metadata Amendments
+992. Digital Amendments
+993. Special Corrections
+994. User Corrections
+995. Research Corrections
+996. Metadata Corrections
+997. Digital Corrections
+998. Special Additions
+999. User Additions
+1000. Stocks
+
+Sure! Here are two short sentences for each term on your list:
+
+1. Acquisition
+
+   - The library's recent acquisition includes rare manuscripts.
+   - Acquisition of new books enhances our collection.
+
+2. \*\*Access
+
+   - Students need proper access to the digital resources.
+   - Access to the archive is restricted to authorized personnel.
+
+3. Archives
+
+   - The archives contain documents dating back to the 1800s.
+   - We are digitizing old archives to preserve them.
+
+4. Bibliography
+
+   - She included a comprehensive bibliography in her thesis.
+   - The bibliography lists all sources used in the research.
+
+5. \*\*Bibliometrics
+
+   - Bibliometrics helps in analyzing the impact of academic publications.
+   - The study used bibliometrics to evaluate journal influence.
+
+6. \*\*Book
+
+   - I borrowed a book on medieval history from the library.
+   - The new book arrived today and is now on the shelf.
+
+7. \*\*Catalog
+
+   - The library catalog is available online for easy searching.
+   - We need to update the catalog with the new arrivals.
+
+8. \*\*Cataloging
+
+   - Cataloging involves assigning call numbers to new books.
+   - The cataloging process ensures books are easy to find.
+
+9. \*\*Classification
+
+   - Library classification systems help organize books by subject.
+   - The Dewey Decimal system is a common classification method.
+
+10. \*\*Collection
+
+    - The museum’s collection includes ancient artifacts.
+    - We are expanding our collection of contemporary fiction.
+
+11. \*\*Circulation
+
+    - The circulation desk handles all book check-outs and returns.
+    - Circulation data helps track which books are most popular.
+
+12. \*\*Conservation
+
+    - Conservation efforts preserve old and fragile manuscripts.
+    - We invested in conservation techniques to protect the rare books.
+
+13. **Copyright**
+
+    - The book is under copyright protection for the next 70 years.
+    - Copyright laws ensure authors receive credit for their work.
+
+14. **Database**
+
+    - The research database includes thousands of academic articles.
+    - We use a database to manage library inventory and records.
+
+15. **Dewey**
+
+    - The Dewey Decimal System organizes books by subject.
+    - Learning Dewey classification can help in finding books easily.
+
+16. **Digital**
+
+    - Digital archives make old documents accessible online.
+    - We are transitioning to digital catalogs for better efficiency.
+
+17. **Ebook**
+
+    - Ebooks are available for download from the library’s website.
+    - She prefers reading ebooks over physical books.
+
+18. **Electronic**
+
+    - Electronic journals are accessible through the library portal.
+    - We need to update our electronic records regularly.
+
+19. **Encyclopedia**
+
+    - The encyclopedia provides detailed information on various topics.
+    - We are adding an online encyclopedia to our digital resources.
+
+20. **Index**
+
+    - The index at the end of the book helps locate specific topics.
+    - Creating an index improves the usability of the research material.
+
+21. **Info**
+
+    - The info desk provides assistance with research queries.
+    - We need to update the info on the library’s website.
+
+22. **Inquiry**
+
+    - An inquiry was made about the availability of rare books.
+    - The library handles all inquiries related to book loans.
+
+23. **Interlibrary**
+
+    - Interlibrary loans allow access to books from other libraries.
+    - We have an interlibrary agreement with several nearby institutions.
+
+24. **Journal**
+
+    - The academic journal publishes research findings quarterly.
+    - She subscribed to a new journal on environmental science.
+
+25. **Keywords**
+
+    - Using specific keywords improves search results in databases.
+    - The article’s keywords help in finding related research.
+
+26. **Lending**
+
+    - The lending policy determines how long books can be borrowed.
+    - She used the library’s lending service to get the book she needed.
+
+27. **Library**
+
+    - The library hosts events for book lovers and researchers.
+    - The local library is open to the public every day.
+
+28. **Librarian**
+
+    - The librarian helped me find a book on ancient civilizations.
+    - Librarians are trained to assist with research and information retrieval.
+
+29. **Manuscript**
+
+    - The ancient manuscript was carefully preserved in the archive.
+    - She completed her manuscript and is ready to submit it for review.
+
+30. **Data**
+
+    - The library collects data on book usage and borrowing patterns.
+    - We need to analyze the data to improve our services.
+
+31. **Microform**
+
+    - The library’s microform collection includes historical newspapers.
+    - Microform is a useful format for preserving old documents.
+
+32. **Periodical**
+
+    - The periodical collection includes monthly and quarterly publications.
+    - She reads several periodicals to stay updated on current research.
+
+33. **Preservation**
+
+    - Preservation methods are crucial for maintaining rare books.
+    - We are investing in preservation techniques for our archival materials.
+
+34. **Query**
+
+    - He submitted a query about the availability of a specific book.
+    - The database query returned a list of relevant articles.
+
+35. **Reference**
+
+    - The reference section includes dictionaries and encyclopedias.
+    - She needed a reference book for her research paper.
+
+36. **Repository**
+
+    - The digital repository stores electronic copies of historical documents.
+    - We have a repository for all our archived files.
+
+37. **Research**
+
+    - The research project focuses on the impact of climate change.
+    - She spent hours in the library conducting her research.
+
+38. **Logbook**
+
+    - The logbook tracks all book check-ins and check-outs.
+    - We maintain a logbook to record daily library activities.
+
+39. **Shelf**
+
+    - The book is placed on the top shelf of the library.
+    - She organized the shelf according to the Dewey Decimal System.
+
+40. **Stack**
+
+    - The book stacks are organized by genre and author.
+    - He found the book he wanted in the fiction stack.
+
+41. **Thesis**
+
+    - Her thesis on urban development was well-received by the committee.
+    - The library provides access to a database of theses and dissertations.
+
+42. **Title**
+
+    - The title of the book is “Modern Architecture.”
+    - Knowing the title helps in searching for the book in the catalog.
+
+43. **User**
+
+    - The library’s new user interface is more intuitive.
+    - We collect feedback from users to improve our services.
+
+44. **Abstract**
+
+    - The abstract summarizes the key points of the research paper.
+    - He read the abstract to decide whether to read the full article.
+
+45. **Authentication**
+
+    - Authentication is required to access the library’s online resources.
+    - The system uses a password for user authentication.
+
+46. **Call No.**
+
+    - The call number helps locate books on the library shelves.
+    - Each book in the library has a unique call number.
+
+47. **Card Catalog**
+
+    - The card catalog is a traditional way to find books in the library.
+    - We are transitioning from a card catalog to a digital system.
+
+48. **Citation**
+
+    - Proper citation is important to credit the original authors.
+    - The citation format depends on the style guide being used.
+
+49. **Class Scheme**
+
+    - The class scheme organizes books by subject and topic.
+    - We need to review the class scheme for better accuracy.
+
+50. **Community**
+
+    - The library hosts events to engage with the local community.
+    - Building a strong community is a goal of our outreach programs.
+
+51. **Cooperation**
+
+    - Cooperation between libraries improves resource sharing.
+    - We value cooperation with other institutions for research projects.
+
+52. **Awareness**
+
+    - Library programs aim to raise awareness about digital literacy.
+    - Increasing public awareness of library services is essential.
+
+53. **DB Mgmt**
+
+    - DB management involves organizing and maintaining the library database.
+    - We are upgrading our DB management system for better performance.
+
+54. **Digital Lib**
+
+    - The digital library provides online access to books and journals.
+    - She prefers using the digital library for convenience.
+
+55. **Digitalization**
+
+    - Digitalization helps in preserving old manuscripts for future use.
+    - The project focuses on the digitalization of archival materials.
+
+56. **Doc Delivery**
+
+    - Document delivery services provide access to requested materials.
+    - She used the doc delivery system to get a copy of the article.
+
+57. **Doc Mgmt**
+
+    - Document management involves organizing and storing files.
+    - We need to improve our doc management system for better efficiency.
+
+58. **E-resource**
+
+    - E-resources include online journals and digital books.
+    - The library’s e-resources are accessible from home.
+
+59. **Encyclopedic**
+
+    - The encyclopedic volume covers a wide range of topics.
+    - We added an encyclopedic reference to the collection.
+
+60. **Expenditure**
+
+    - The budget report includes details on library expenditure.
+    - We need to review the expenditure for the new acquisitions.
+
+61. **Findings**
+
+    - The research findings were published in an academic journal.
+    - Her findings contributed to the study on renewable energy.
+
+62. **Holdings**
+
+    - The library’s holdings include thousands of books and journals.
+    - We are expanding our holdings to include more digital resources.
+
+63. **Workloads**
+
+    - Staff workloads increase during peak library hours.
+    - Managing workloads efficiently is crucial for library operations.
+
+64. **Knowledge Base**
+
+    - The knowledge base includes frequently asked questions and resources.
+    - We are developing a knowledge base to assist users with common issues.
+
+65. **Lib Science**
+
+    - Library science encompasses the study of information management.
+    - She pursued a degree in library science to enhance her skills.
+
+66. **Lib Systems**
+
+    - Library systems manage cataloging and circulation functions.
+    - We are upgrading our library systems to improve efficiency.
+
+67. _Metadata Std_
+
+- Metadata standards ensure consistent data description.
+- We follow metadata standards to improve data interoperability.
+
+68. _Patron_
+
+- The patron borrowed several books from the library.
+- Patrons can request new titles for the library collection.
+
+69. _Preserv. Tech_
+
+- Preservation technology helps maintain the condition of old books.
+- We use preservation technology to digitize fragile documents.
+
+70. _Public Lib_
+
+- The public library offers free access to books and resources.
+- The public library hosts community events and workshops.
+
+71. _Query Mgmt_
+
+- Query management helps organize and handle user search requests.
+- We need to improve query management to speed up search results.
+
+72. _Rare Books_
+
+- The rare books collection includes first editions and historical manuscripts.
+- Rare books are kept in a secure, climate-controlled room.
+
+73. _Reader Svc_
+
+- Reader services assist with locating and recommending books.
+- The library’s reader services team is available for personalized help.
+
+74. _Ref. Svc_
+
+- Reference services provide detailed information and research support.
+- We offer reference services to help users with in-depth queries.
+
+75. _Remote Access_
+
+- Remote access allows users to connect to the library’s digital resources from home.
+- She used remote access to download a journal article from the library.
+
+76. _Special Coll._
+
+- Special collections feature unique and valuable items, like manuscripts and archives.
+- The library’s special collections are available for research by appointment.
+
+77. _Stack Mgmt_
+
+- Stack management involves organizing and maintaining book shelves.
+- Effective stack management ensures books are easily accessible.
+
+78. _Subject Hdgs_
+
+- Subject headings categorize books and articles by topic.
+- We updated the subject headings to improve search accuracy.
+
+79. _User Exp._
+
+- User experience focuses on improving how patrons interact with library systems.
+- We are redesigning the website to enhance user experience.
+
+80. _Workflow_
+
+- Workflow refers to the process of handling library tasks and operations.
+- We streamlined the workflow to improve efficiency in book check-outs.
+
+81. _Web Search_
+
+- Web search tools help users find information online.
+- The library provides web search resources to aid in research.
+
+82. _Access Ctrl_
+
+- Access control systems manage who can view or use certain library resources.
+- We installed access control to protect sensitive materials.
+
+83. _Archive Mgmt_
+
+- Archive management involves organizing and preserving historical documents.
+- Effective archive management ensures long-term accessibility of records.
+
+84. _Facilitator_
+
+- The facilitator led the workshop on using library resources.
+- A facilitator helps guide library events and training sessions.
+
+85. _Circ. Desk_
+
+- The circulation desk handles book check-outs and returns.
+- She visited the circ desk to renew her library books.
+
+86. _Coll. Dev._
+
+- Collection development focuses on acquiring and maintaining library materials.
+- Collection development ensures the library’s holdings meet user needs.
+
+87. _Comp. Catalog_
+
+- The computerized catalog allows users to search for books online.
+- We updated the comp catalog to include new acquisitions.
+
+88. _Content Mgmt_
+
+- Content management involves organizing and maintaining digital resources.
+- The library uses content management systems to manage online materials.
+
+89. _Coop. Catalog_
+
+- Cooperative cataloging helps libraries share and standardize records.
+- We participate in cooperative cataloging to improve resource discovery.
+
+90. _DB Indexing_
+
+- Database indexing speeds up search queries by organizing data.
+- We are optimizing DB indexing to enhance search performance.
+
+91. _Doc Indexing_
+
+- Document indexing involves creating searchable keywords for files.
+- Effective doc indexing improves the retrieval of research materials.
+
+92. _Digital Preserv._
+
+- Digital preservation ensures that electronic records remain accessible over time.
+- We are implementing digital preservation strategies for archival content.
+
+93. _Info Retrieval_
+
+- Information retrieval focuses on finding relevant data from databases.
+- The library’s info retrieval system helps users locate needed information.
+
+94. _Knowledge Mgmt_
+
+- Knowledge management involves capturing and sharing organizational expertise.
+- We use knowledge management to improve information access and use.
+
+95. _Metadata Creation_
+
+- Metadata creation involves adding descriptive information to digital files.
+- Accurate metadata creation enhances the discoverability of resources.
+
+96. _Online Catalog_
+
+- The online catalog allows users to search for books and materials from anywhere.
+- We updated the online catalog to improve user interface and search options.
+
+97. _Ref. Tools_
+
+- Reference tools include dictionaries, encyclopedias, and other research aids.
+- The library provides various ref. tools to support academic work.
+
+98. _Research DBs_
+
+- Research databases offer access to academic journals and articles.
+- We subscribed to new research DBs to expand our resource offerings.
+
+99. _Resource Share_
+
+- Resource sharing involves exchanging materials between libraries.
+- The library participates in resource share programs to provide more access.
+
+100. _School Lib_
+
+- The school library supports students and teachers with books and resources.
+- The school library organizes events to promote reading and research skills.
+
+Sure! Here is the list with the asterisks removed:
+
+1. Acquisition
+
+   - The library's recent acquisition includes rare manuscripts.
+   - Acquisition of new books enhances our collection.
+
+2. Access
+
+   - Students need proper access to the digital resources.
+   - Access to the archive is restricted to authorized personnel.
+
+3. Archives
+
+   - The archives contain documents dating back to the 1800s.
+   - We are digitizing old archives to preserve them.
+
+4. Bibliography
+
+   - She included a comprehensive bibliography in her thesis.
+   - The bibliography lists all sources used in the research.
+
+5. Bibliometrics
+
+   - Bibliometrics helps in analyzing the impact of academic publications.
+   - The study used bibliometrics to evaluate journal influence.
+
+6. Book
+
+   - I borrowed a book on medieval history from the library.
+   - The new book arrived today and is now on the shelf.
+
+7. Catalog
+
+   - The library catalog is available online for easy searching.
+   - We need to update the catalog with the new arrivals.
+
+8. Cataloging
+
+   - Cataloging involves assigning call numbers to new books.
+   - The cataloging process ensures books are easy to find.
+
+9. Classification
+
+   - Library classification systems help organize books by subject.
+   - The Dewey Decimal system is a common classification method.
+
+10. Collection
+
+    - The museum’s collection includes ancient artifacts.
+    - We are expanding our collection of contemporary fiction.
+
+11. Circulation
+
+    - The circulation desk handles all book check-outs and returns.
+    - Circulation data helps track which books are most popular.
+
+12. Conservation
+
+    - Conservation efforts preserve old and fragile manuscripts.
+    - We invested in conservation techniques to protect the rare books.
+
+13. Copyright
+
+    - The book is under copyright protection for the next 70 years.
+    - Copyright laws ensure authors receive credit for their work.
+
+14. Database
+
+    - The research database includes thousands of academic articles.
+    - We use a database to manage library inventory and records.
+
+15. Dewey
+
+    - The Dewey Decimal System organizes books by subject.
+    - Learning Dewey classification can help in finding books easily.
+
+16. Digital
+
+    - Digital archives make old documents accessible online.
+    - We are transitioning to digital catalogs for better efficiency.
+
+17. Ebook
+
+    - Ebooks are available for download from the library’s website.
+    - She prefers reading ebooks over physical books.
+
+18. Electronic
+
+    - Electronic journals are accessible through the library portal.
+    - We need to update our electronic records regularly.
+
+19. Encyclopedia
+
+    - The encyclopedia provides detailed information on various topics.
+    - We are adding an online encyclopedia to our digital resources.
+
+20. Index
+
+    - The index at the end of the book helps locate specific topics.
+    - Creating an index improves the usability of the research material.
+
+21. Info
+
+    - The info desk provides assistance with research queries.
+    - We need to update the info on the library’s website.
+
+22. Inquiry
+
+    - An inquiry was made about the availability of rare books.
+    - The library handles all inquiries related to book loans.
+
+23. Interlibrary
+
+    - Interlibrary loans allow access to books from other libraries.
+    - We have an interlibrary agreement with several nearby institutions.
+
+24. Journal
+
+    - The academic journal publishes research findings quarterly.
+    - She subscribed to a new journal on environmental science.
+
+25. Keywords
+
+    - Using specific keywords improves search results in databases.
+    - The article’s keywords help in finding related research.
+
+26. Lending
+
+    - The lending policy determines how long books can be borrowed.
+    - She used the library’s lending service to get the book she needed.
+
+27. Library
+
+    - The library hosts events for book lovers and researchers.
+    - The local library is open to the public every day.
+
+28. Librarian
+
+    - The librarian helped me find a book on ancient civilizations.
+    - Librarians are trained to assist with research and information retrieval.
+
+29. Manuscript
+
+    - The ancient manuscript was carefully preserved in the archive.
+    - She completed her manuscript and is ready to submit it for review.
+
+30. Data
+
+    - The library collects data on book usage and borrowing patterns.
+    - We need to analyze the data to improve our services.
+
+31. Microform
+
+    - The library’s microform collection includes historical newspapers.
+    - Microform is a useful format for preserving old documents.
+
+32. Periodical
+
+    - The periodical collection includes monthly and quarterly publications.
+    - She reads several periodicals to stay updated on current research.
+
+33. Preservation
+
+    - Preservation methods are crucial for maintaining rare books.
+    - We are investing in preservation techniques for our archival materials.
+
+34. Query
+
+    - He submitted a query about the availability of a specific book.
+    - The database query returned a list of relevant articles.
+
+35. Reference
+
+    - The reference section includes dictionaries and encyclopedias.
+    - She needed a reference book for her research paper.
+
+36. Repository
+
+    - The digital repository stores electronic copies of historical documents.
+    - We have a repository for all our archived files.
+
+37. Research
+
+    - The research project focuses on the impact of climate change.
+    - She spent hours in the library conducting her research.
+
+38. Logbook
+
+    - The logbook tracks all book check-ins and check-outs.
+    - We maintain a logbook to record daily library activities.
+
+39. Shelf
+
+    - The book is placed on the top shelf of the library.
+    - She organized the shelf according to the Dewey Decimal System.
+
+40. Stack
+
+    - The book stacks are organized by genre and author.
+    - He found the book he wanted in the fiction stack.
+
+41. Thesis
+
+    - Her thesis on urban development was well-received by the committee.
+    - The library provides access to a database of theses and dissertations.
+
+42. Title
+
+    - The title of the book is “Modern Architecture.”
+    - Knowing the title helps in searching for the book in the catalog.
+
+43. User
+
+    - The library’s new user interface is more intuitive.
+    - We collect feedback from users to improve our services.
+
+44. Abstract
+
+    - The abstract summarizes the key points of the research paper.
+    - He read the abstract to decide whether to read the full article.
+
+45. Authentication
+
+    - Authentication is required to access the library’s online resources.
+    - The system uses a password for user authentication.
+
+46. Call No.
+
+    - The call number helps locate books on the library shelves.
+    - Each book in the library has a unique call number.
+
+47. Card Catalog
+
+    - The card catalog is a traditional way to find books in the library.
+    - We are transitioning from a card catalog to a digital system.
+
+48. Citation
+
+    - Proper citation is important to credit the original authors.
+    - The citation format depends on the style guide being used.
+
+49. Class Scheme
+
+    - The class scheme organizes books by subject and topic.
+    - We need to review the class scheme for better accuracy.
+
+50. Community
+
+    - The library hosts events to engage with the local community.
+    - Building a strong community is a goal of our outreach programs.
+
+51. Cooperation
+
+    - Cooperation between libraries improves resource sharing.
+    - We value cooperation with other institutions for research projects.
+
+52. Awareness
+
+    - Library programs aim to raise awareness about digital literacy.
+    - Increasing public awareness of library services is essential.
+
+53. DB Mgmt
+
+    - DB management involves organizing and maintaining the library database.
+    - We are upgrading our DB management system for better performance.
+
+54. Digital Lib
+
+    - The digital library provides online access to books and journals.
+    - She prefers using the digital library for convenience.
+
+55. Digitalization
+
+    - Digitalization helps in preserving old manuscripts for future use.
+    - The project focuses on the digitalization of archival materials.
+
+56. Doc Delivery
+
+    - Document delivery services provide access to requested materials.
+    - She used the doc delivery system to get a copy of the article.
+
+57. Doc Mgmt
+
+    - Document management involves organizing and storing files.
+    - We need to improve our doc management system for better efficiency.
+
+58. E-resource
+
+    - E-resources include online journals and digital books.
+    - The library’s e-resources are accessible from home.
+
+59. Encyclopedic
+
+    - The encyclopedic volume covers a wide range of topics.
+    - We added an encyclopedic reference to the collection.
+
+60. Expenditure
+
+    - The budget report includes details on library expenditure.
+    - We need to review the expenditure for the new acquisitions.
+
+61. Findings
+
+    - The research findings were published in an academic journal.
+    - Her findings contributed to the study on renewable energy.
+
+62. Holdings
+
+    - The library’s holdings include thousands of books and journals.
+    - We are expanding our holdings to include more digital resources.
+
+63. Workloads
+
+    - Staff workloads increase during peak library hours.
+    - Managing workloads efficiently is crucial for library operations.
+
+64. Knowledge Base
+
+    - The knowledge base includes frequently asked questions and resources.
+    - We are developing a knowledge base to assist users with common issues.
+
+65. Lib Science
+
+    - Library science encompasses the study of information management.
+    - She pursued a degree in library science to enhance her skills.
+
+66. Lib Systems
+
+    - Library systems manage cataloging and circulation functions.
+    - We are upgrading our library systems to improve efficiency.
+
+67. Metadata Std
+
+    - Metadata standards ensure consistent data description.
+    - We follow metadata standards to improve data interoperability.
+
+68. Patron
+
+    - The patron borrowed several books from the library.
+    - Patrons can request new titles for the library collection.
+
+69. Preserv. Tech
+
+    - Preservation technology helps maintain the condition of old books.
+    - We use preservation technology to digitize fragile documents.
+
+70. Public Lib
+
+    - The public library offers free access to books and resources.
+    - The public library hosts community events and workshops.
+
+71. Query Mgmt
+
+    - Query management helps organize and handle user search requests.
+    - We need to improve query management to speed up search results.
+
+72. Rare Books
+
+    - The rare books collection includes first editions and historical manuscripts.
+    - Rare books are kept in a secure, climate-controlled room.
+
+73. Reader Svc
+
+    - Reader services assist with locating and recommending books.
+    - The library’s reader services team is available for personalized help.
+
+74. Ref. Svc
+
+    - Reference services provide detailed information and research support.
+    - We offer reference services to help users with in-depth queries.
+
+75. Remote Access
+
+    - Remote access allows users to connect to the library’s digital resources from home.
+    - She used remote access to download a journal article from the library.
+
+76. Special Coll.
+
+    - Special collections feature unique and valuable items, like manuscripts and archives.
+    - The library’s special collections are available for research by appointment.
+
+77. Stack Mgmt
+
+    - Stack management involves organizing and maintaining book shelves.
+    - Effective stack management ensures books are easily accessible.
+
+78. Subject Hdgs
+
+    - Subject headings categorize books and articles by topic.
+    - We updated the subject headings to improve search accuracy.
+
+79. User Exp.
+
+    - User experience focuses on improving how patrons interact with library systems.
+    - We are redesigning the website to enhance user experience.
+
+80. Workflow
+
+    - Workflow refers to the process of handling library tasks and operations.
+    - We streamlined the workflow to improve efficiency in book check-outs.
+
+81. Web Search
+
+    - Web search tools help users find information online.
+    - The library provides web search resources to aid in research.
+
+82. Access Ctrl
+
+    - Access control systems manage who can view or use certain library resources.
+    - We installed access control to protect sensitive materials.
+
+83. Archive Mgmt
+
+    - Archive management involves organizing and preserving historical documents.
+    - Effective archive management ensures long-term accessibility of records.
+
+84. Facilitator
+
+    - The facilitator led the workshop on using library resources.
+    - A facilitator helps guide library events and training sessions.
+
+85. Circ. Desk
+
+    - The circulation desk handles book check-outs and returns.
+    - She visited the circ desk to renew her library books.
+
+86. Coll. Dev.
+
+    - Collection development focuses on acquiring and maintaining library materials.
+    - Collection development ensures the library’s holdings meet user needs.
+
+87. Comp. Catalog
+
+    - The computerized catalog allows users to search for books online.
+    - We updated the comp catalog to include new acquisitions.
+
+88. Content Mgmt
+
+    - Content management involves organizing and maintaining digital resources.
+    - The library uses content management systems to manage online materials.
+
+89. Coop. Catalog
+
+    - Cooperative cataloging helps libraries share and standardize records.
+    - We participate in cooperative cataloging to improve resource discovery.
+
+90. DB Indexing
+
+    - Database indexing speeds up search queries by organizing data.
+    - We are optimizing DB indexing to enhance search performance.
+
+91. Doc Indexing
+
+    - Document indexing involves creating searchable keywords for files.
+    - Effective doc indexing improves the retrieval of research materials.
+
+92. Digital Preserv.
+
+    - Digital preservation ensures that electronic records remain accessible over time.
+    - We are implementing digital preservation strategies for archival content.
+
+93. Info Retrieval
+
+    - Information retrieval focuses on finding relevant data from databases.
+    - The library’s info retrieval system helps users locate needed information.
+
+94. Knowledge Mgmt
+
+    - Knowledge management involves capturing and sharing organizational expertise.
+    - We use knowledge management to improve information access and use.
+
+95. Metadata Creation
+
+    - Metadata creation involves adding descriptive information to digital files.
+    - Accurate metadata creation enhances the discoverability of resources.
+
+96. Online Catalog
+
+    - The online catalog allows users to search for books and materials from anywhere.
+    - We updated the online catalog to improve user interface and search options.
+
+97. Ref. Tools
+
+    - Reference tools include dictionaries, encyclopedias, and other research aids.
+    - The library provides various ref. tools to support academic work.
+
+98. Research DBs
+
+    - Research databases offer access to academic journals and articles.
+    - We subscribed to new research DBs to expand our resource offerings.
+
+99. Resource Share
+
+    - Resource sharing involves exchanging materials between libraries.
+    - The library participates in resource share programs to provide more access.
+
+100. School Lib
+
+
+    - The school library supports students and teachers with books and resources.
+    - The school library organizes events to promote reading and research skills.
