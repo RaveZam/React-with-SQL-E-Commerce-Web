@@ -1,12 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
 import styles from "./login.module.css";
-import { useNavigate } from "react-router-dom";
 
 import Errorcomponent from "./Errorcomponent";
 
 export default function Login() {
-  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [registering, isRegistering] = useState(false);
@@ -16,6 +14,7 @@ export default function Login() {
   const [registersuccess, setregisterSuccess] = useState(false);
   const [emptyLogin, setEmptylogin] = useState(false);
   const [invalidEmail, setinvalidEmail] = useState(false);
+  const [incorrectpassword, setincorrectpassword] = useState(false);
 
   function handleLogin(e) {
     e.preventDefault();
@@ -30,6 +29,7 @@ export default function Login() {
         console.log(responce);
         if (responce.data.status === "loginsuccess") {
           setloginSuccess(true);
+          setEmptylogin(false);
           console.log("Login success from react");
         } else if (responce.data.status === "empty") {
           setEmptylogin(true);
@@ -37,6 +37,7 @@ export default function Login() {
         } else if (responce.data.status === "incorrectpassword") {
           setloginSuccess(false);
           setEmptylogin(false);
+          setincorrectpassword(true);
           console.log("Incorrect Password");
         } else if (responce.data.status === "usernotfound") {
           setloginSuccess(false);
@@ -59,7 +60,6 @@ export default function Login() {
       .post(url, fData)
       .then((responce) => {
         if (responce.data.status === "emailavail") {
-          setregisterSuccess(true);
           console.log("Email Avail");
         } else if (responce.data.status === "emailtaken") {
           console.log("emailtaken");
@@ -72,6 +72,7 @@ export default function Login() {
           console.log("weakpassword");
         } else if (responce.data.status === "registersuccess") {
           console.log("registersuccess");
+          setregisterSuccess(true);
         }
       })
       .catch((error) => console.log(error));
@@ -83,6 +84,7 @@ export default function Login() {
     setUsername("");
     setPassword("");
     isRegistering(!registering);
+    setregisterSuccess(false);
   }
 
   return (
@@ -127,6 +129,9 @@ export default function Login() {
               className={styles.showemptymsg}
               message="Please Input Username and Password"
             />
+
+            {/* Register Error Components */}
+
             <Errorcomponent
               condition={registersuccess}
               className={styles.showregsuccess}
