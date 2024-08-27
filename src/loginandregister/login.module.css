@@ -120,3 +120,20 @@
 .showinvalidemail {
   display: block;
 }
+
+.showincorrectpassword {
+  display: block;
+}
+
+.showusernotfound {
+  display: block;
+}
+
+.showemailtaken {
+  display: block;
+}
+
+.showweakpassword {
+  display: block;
+  white-space: wrap;
+}

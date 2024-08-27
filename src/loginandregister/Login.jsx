@@ -10,11 +10,13 @@ export default function Login() {
   const [registering, isRegistering] = useState(false);
   const [loginbtn, pressloginbtn] = useState(false);
   const [registerbtn, pressregisterbtn] = useState(false);
-  const [loginSuccess, setloginSuccess] = useState(true);
   const [registersuccess, setregisterSuccess] = useState(false);
   const [emptyLogin, setEmptylogin] = useState(false);
   const [invalidEmail, setinvalidEmail] = useState(false);
   const [incorrectpassword, setincorrectpassword] = useState(false);
+  const [usernotfound, setusernotfound] = useState(false);
+  const [emailTaken, setEmailtaken] = useState(false);
+  const [weakpassword, setweakpassword] = useState(false);
 
   function handleLogin(e) {
     e.preventDefault();
@@ -28,25 +30,26 @@ export default function Login() {
       .then((responce) => {
         console.log(responce);
         if (responce.data.status === "loginsuccess") {
-          setloginSuccess(true);
           setEmptylogin(false);
+          setusernotfound(false);
+          setincorrectpassword(false);
           console.log("Login success from react");
         } else if (responce.data.status === "empty") {
           setEmptylogin(true);
           console.log("Empty");
         } else if (responce.data.status === "incorrectpassword") {
-          setloginSuccess(false);
+          setusernotfound(false);
           setEmptylogin(false);
           setincorrectpassword(true);
           console.log("Incorrect Password");
         } else if (responce.data.status === "usernotfound") {
-          setloginSuccess(false);
           setEmptylogin(false);
+          setusernotfound(true);
+          setincorrectpassword(false);
           console.log("User not found");
         }
       })
       .catch((error) => console.log(error));
-    console.log(password);
   }
 
   function handleRegister(e) {
@@ -63,11 +66,14 @@ export default function Login() {
           console.log("Email Avail");
         } else if (responce.data.status === "emailtaken") {
           console.log("emailtaken");
+          setEmailtaken(true);
         } else if (responce.data.status === "invalidemail") {
           console.log("invalidemail");
           setinvalidEmail(true);
         } else if (responce.data.status === "weakpassword") {
+          setEmailtaken(false);
           console.log("weakpassword");
+          setweakpassword(true);
         } else if (responce.data.status === "strongpassword") {
           console.log("weakpassword");
         } else if (responce.data.status === "registersuccess") {
@@ -76,8 +82,6 @@ export default function Login() {
         }
       })
       .catch((error) => console.log(error));
-    setUsername("");
-    setPassword("");
   }
 
   function gotoRegister() {
@@ -120,18 +124,21 @@ export default function Login() {
               type="text"
             />
             <Errorcomponent
-              condition={!loginSuccess}
-              className={styles.showerrormsg}
-              message="Incorrect Username and Password"
-            />
-            <Errorcomponent
               condition={emptyLogin}
               className={styles.showemptymsg}
               message="Please Input Username and Password"
             />
-
+            <Errorcomponent
+              condition={incorrectpassword}
+              className={styles.showincorrectpassword}
+              message="Incorrect Password"
+            />
+            <Errorcomponent
+              condition={usernotfound}
+              className={styles.showusernotfound}
+              message="Email Does not Exist"
+            />
             {/* Register Error Components */}
-
             <Errorcomponent
               condition={registersuccess}
               className={styles.showregsuccess}
@@ -141,6 +148,16 @@ export default function Login() {
               condition={invalidEmail}
               className={styles.showinvalidemail}
               message="Invalid Email"
+            />
+            <Errorcomponent
+              condition={emailTaken}
+              className={styles.showemailtaken}
+              message="Email Already Exists"
+            />
+            <Errorcomponent
+              condition={weakpassword}
+              className={styles.showweakpassword}
+              message="Password must contain atleast one Uppercase,Lowercase and Number"
             />
             <button
               className={styles.loginbtn}
