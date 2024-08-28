@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import styles from "./login.module.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import Errorcomponent from "./Errorcomponent";
 
@@ -17,6 +18,7 @@ export default function Login() {
   const [usernotfound, setusernotfound] = useState(false);
   const [emailTaken, setEmailtaken] = useState(false);
   const [weakpassword, setweakpassword] = useState(false);
+  const navigate = useNavigate();
 
   function handleLogin(e) {
     e.preventDefault();
@@ -30,6 +32,7 @@ export default function Login() {
       .then((responce) => {
         console.log(responce);
         if (responce.data.status === "loginsuccess") {
+          navigate("/Hero");
           setEmptylogin(false);
           setusernotfound(false);
           setincorrectpassword(false);
@@ -51,7 +54,6 @@ export default function Login() {
       })
       .catch((error) => console.log(error));
   }
-
   function handleRegister(e) {
     e.preventDefault();
     const url = "http://localhost/reactdatabase/index.php";
@@ -78,6 +80,7 @@ export default function Login() {
           console.log("weakpassword");
         } else if (responce.data.status === "registersuccess") {
           console.log("registersuccess");
+          setweakpassword(false);
           setregisterSuccess(true);
         }
       })

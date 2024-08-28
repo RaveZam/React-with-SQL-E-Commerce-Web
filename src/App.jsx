@@ -4,12 +4,15 @@ import styles from "./app.module.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
+import Hero from "./hero/Hero";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />
+          <Route path="/Hero" element={<Hero />} />
         </Routes>
       </BrowserRouter>
     </>
