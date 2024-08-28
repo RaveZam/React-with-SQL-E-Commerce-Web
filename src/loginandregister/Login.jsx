@@ -80,8 +80,11 @@ export default function Login() {
           console.log("weakpassword");
         } else if (responce.data.status === "registersuccess") {
           console.log("registersuccess");
+          setEmailtaken(false);
           setweakpassword(false);
           setregisterSuccess(true);
+          setUsername("");
+          setPassword("");
         }
       })
       .catch((error) => console.log(error));
