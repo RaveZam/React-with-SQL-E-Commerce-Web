@@ -1,0 +1,46 @@
+ul {
+  margin: 20px;
+}
+
+li {
+  display: inline;
+  font-size: 1.2vw;
+  color: white;
+  padding: 0px 20px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.itemlist {
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111111;
+  padding: 14px;
+  height: 10vh;
+  width: 100%;
+}
+
+.logo {
+  /* position: absolute; */
+  color: white;
+  font-weight: 200;
+  /* margin: 12px; */
+  max-width: 14%;
+  transform: translateX(12px);
+  padding: 0px 0px;
+  cursor: pointer;
+}
+
+.icons {
+  filter: invert(1);
+  margin-right: 2%;
+}
+
+.icon {
+}

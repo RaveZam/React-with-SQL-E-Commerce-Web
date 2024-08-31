@@ -1,0 +1,28 @@
+.hero {
+  background-color: #162528;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  /* position: absolute;
+  right: 10%; */
+}
+.itemcontainer {
+  margin-right: auto;
+}
+.txtcontainer {
+  margin-left: auto;
+  color: white;
+}
+.title1 {
+}
+
+.title4 {
+  padding: 10px;
+  font-weight: 900;
+  color: black;
+  background-color: #ffc000;
+}

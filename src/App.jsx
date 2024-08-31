@@ -9,12 +9,13 @@ import Hero from "./hero/Hero";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />
           <Route path="/Hero" element={<Hero />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <Hero />
     </>
   );
 }
