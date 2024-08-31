@@ -1,0 +1,20 @@
+.adsbar {
+  height: 35vh;
+  background-color: #111;
+}
+
+.adsbarli {
+  margin: 0 48px;
+  border-right: solid 1px rgba(255, 255, 255, 0.315);
+}
+
+.adsbarli:last-child {
+  border-right: none;
+}
+
+.adsbarul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}

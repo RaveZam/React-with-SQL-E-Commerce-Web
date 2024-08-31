@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Login from "./loginandregister/Login";
 import styles from "./app.module.css";
 import About from "./aboutdesigner/About";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import Hero from "./hero/Hero";
+import Adsbar from "./adsbar/Adsbar";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       </BrowserRouter> */}
       <Hero />
       <About />
+      <Adsbar />
     </>
   );
 }
