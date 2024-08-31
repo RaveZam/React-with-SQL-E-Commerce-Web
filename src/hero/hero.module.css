@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
 .hero {
   background-color: #162528;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 5%;
 }
 
 .item {
-  /* position: absolute;
-  right: 10%; */
+  max-width: 100% !important;
 }
 .itemcontainer {
   margin-right: auto;
@@ -16,8 +18,35 @@
 .txtcontainer {
   margin-left: auto;
   color: white;
+  /* font-size: 2vw; */
 }
 .title1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4vw;
+}
+
+.title2 {
+  font-weight: bold;
+  font-size: 6vw;
+}
+
+.wrap {
+  display: flex;
+  /* background-color: red; */
+}
+
+.title3 {
+  font-weight: bold;
+  color: #ffc000;
+  border-right: solid 2px #ffc000;
+  padding-right: 12px;
+  font-size: 6vw;
+}
+.title35 {
+  font-family: "Dancing Script", cursive;
+  transform: translateY(30%);
+  padding-left: 16px;
+  font-size: 3vw;
 }
 
 .title4 {
@@ -25,4 +54,6 @@
   font-weight: 900;
   color: black;
   background-color: #ffc000;
+  margin-top: 12px;
+  font-size: 4vw;
 }
