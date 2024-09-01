@@ -1,5 +1,9 @@
 import styles from "./header.module.css";
-export default function Icons() {
+export default function Icons({ setshowcart, showcart }) {
+  function carticonclicked() {
+    setshowcart(!showcart);
+    console.log(showcart);
+  }
   return (
     <>
       <div className={styles.icons}>
@@ -21,7 +25,7 @@ export default function Icons() {
             alt="Icon"
           />
         </li>
-        <li>
+        <li onClick={() => carticonclicked()}>
           <img
             className={styles.icon}
             src="./images/cart.png"

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Login from "./loginandregister/Login";
 import styles from "./app.module.css";
 import About from "./aboutdesigner/About";
-
+import Itempage from "./itempage/Itempage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
@@ -19,10 +19,11 @@ function App() {
           <Route path="/Hero" element={<Hero />} />
         </Routes>
       </BrowserRouter> */}
-      <Hero />
+      {/* <Hero />
       <About />
       <Adsbar />
-      <Lampsection />
+      <Lampsection /> */}
+      <Itempage />
     </>
   );
 }
