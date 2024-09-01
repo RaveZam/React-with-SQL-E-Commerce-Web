@@ -17,16 +17,6 @@
   background-repeat: no-repeat;
 }
 
-.aboutbtn {
-  padding: 10px 20px;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  font-weight: 400;
-  font-size: 1.1vw;
-  cursor: pointer;
-}
-
 .aboutimg {
   max-width: 100%;
 }

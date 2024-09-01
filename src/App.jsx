@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import Hero from "./hero/Hero";
 import Adsbar from "./adsbar/Adsbar";
+import Lampsection from "./lampsection/Lampsection";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Hero />
       <About />
       <Adsbar />
+      <Lampsection />
     </>
   );
 }

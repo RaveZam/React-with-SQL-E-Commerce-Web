@@ -1,4 +1,5 @@
 import styles from "./about.module.css";
+import Button from "../components/Button";
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
           not only meets the highest <br /> standards of quality but also
           elevates the spaces it inhabits.
         </p>
-        <button className={styles.aboutbtn}>Read More</button>
+        <Button />
       </div>
       <div
         className={styles.aboutimgcontainer}

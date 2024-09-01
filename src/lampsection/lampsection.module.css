@@ -1,0 +1,26 @@
+.lampsection {
+  background-color: #171717;
+  height: 60vh;
+  display: flex;
+}
+
+.lampsectiontxtcontainer {
+  color: white;
+  align-self: center;
+  /* text-align: center; */
+  margin: 0 auto;
+  padding-left: 2%;
+}
+
+.lampimg2 {
+  margin-left: auto;
+  margin-right: 4%;
+}
+
+.lamptitle {
+  padding-bottom: 4px;
+}
+
+.lampp {
+  padding-bottom: 16px;
+}
