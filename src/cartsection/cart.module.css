@@ -1,0 +1,22 @@
+.cart {
+  margin: 0;
+  display: flex;
+  position: absolute;
+  background-color: #171717;
+  height: 20vh;
+  width: 20%;
+  transform: translateX(396%) translateY(75%);
+  border-top: solid 3px #ffc000;
+}
+
+.cartitemtitle {
+  padding: 20px;
+  color: white;
+}
+
+.cartitems {
+  white-space: nowrap;
+  position: absolute;
+  background-color: #171717;
+  width: 100%;
+}
