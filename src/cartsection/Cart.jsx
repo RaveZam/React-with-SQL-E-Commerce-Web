@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./cart.module.css";
 
 export default function Cart({ showcart }) {

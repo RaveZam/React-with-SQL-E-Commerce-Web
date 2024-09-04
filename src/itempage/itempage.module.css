@@ -1,0 +1,92 @@
+.itempage {
+  background-color: #171717;
+  display: flex;
+  padding: 50px 100px;
+  color: white;
+
+  height: 100vh;
+  font-size: 0.8vw;
+}
+
+.itemimage {
+  max-width: 100%;
+  height: 80%;
+}
+
+.imagecontainer {
+  width: 60%;
+}
+
+.descriptioncontainer {
+  padding: 10px 30px;
+}
+
+.desctitle {
+  font-weight: 300;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(173, 173, 173, 0.549);
+}
+
+.desctitle::after {
+  content: "";
+  margin-right: 200px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(173, 173, 173, 0.549);
+}
+
+.starrow {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.603);
+}
+
+.starcontent {
+  margin: 20px 0;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.734);
+}
+
+.starref {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.747);
+}
+
+.productdetails {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.603);
+}
+
+.productdetailcolumn1 {
+  margin-right: 100px;
+}
+.productdetailcolumn2 {
+  color: rgba(255, 255, 255, 0.604);
+}
+
+.productdetailcolumn1 h2 {
+  font-weight: 300;
+  padding: 8px 0;
+}
+.productdetailcolumn2 h2 {
+  padding: 8px 0;
+}
+
+.pricesection {
+  padding: 20px 0;
+}
+
+.pricesection h2 {
+  padding: 8px 0;
+}
+
+.pricesection h2:first-child {
+  font-weight: 500;
+}
+
+.pricesection h2:nth-child(3) {
+  padding-bottom: 16px;
+}
+
+.itempagebtn {
+  background-color: #ffc000;
+}
