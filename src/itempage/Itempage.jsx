@@ -1,19 +1,19 @@
 import styles from "./itempage.module.css";
-import Header from "../header/Header";
 import Button from "../components/Button";
+import Header from "../header/Header";
 
 export default function Itempage({
   cart,
   addToCart,
   cartitems,
   addToCartItems,
+  itemimage,
+  itemname,
+  itemprice,
 }) {
-  let itemname = "Silver effect Cone Light shade (D) 190mm";
-  let itemimage = "./images/lamp1.webp";
-  const itemprice = 6;
   return (
     <>
-      <Header cartitems={cartitems} />
+      <Header cartitems={cartitems} cart={cart} itemprice={itemprice} />
       <div className={styles.itempage}>
         <div className={styles.imagecontainer}>
           <img className={styles.itemimage} src={itemimage} />
@@ -58,6 +58,7 @@ export default function Itempage({
               itemimage={itemimage}
               cartitems={cartitems}
               addToCartItems={addToCartItems}
+              itemprice={itemprice}
             />
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function About() {
           not only meets the highest <br /> standards of quality but also
           elevates the spaces it inhabits.
         </p>
-        <Button />
+        <Button btn message={"Read More"} />
       </div>
       <div
         className={styles.aboutimgcontainer}

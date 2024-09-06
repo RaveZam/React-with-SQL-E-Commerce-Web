@@ -4,7 +4,7 @@ import Itemlist from "./Itemlist";
 import Logo from "./Logo";
 import Cart from "../cartsection/Cart";
 import { useState } from "react";
-export default function Header() {
+export default function Header({ cartitems, cart }) {
   const [showcart, setshowcart] = useState(false);
   return (
     <>
@@ -12,7 +12,7 @@ export default function Header() {
         <Logo />
         <Itemlist />
         <Icons setshowcart={setshowcart} showcart={showcart} />
-        <Cart showcart={showcart} />
+        <Cart cart={cart} cartitems={cartitems} showcart={showcart} />
       </div>
     </>
   );

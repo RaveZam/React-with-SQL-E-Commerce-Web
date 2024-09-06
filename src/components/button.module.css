@@ -7,3 +7,11 @@
   font-size: 1.1vw;
   cursor: pointer;
 }
+
+.removecartbtn {
+  background-color: #ffc000;
+  margin-left: 8px;
+  font-size: 0.8vw;
+  height: 30%;
+  align-self: center;
+}

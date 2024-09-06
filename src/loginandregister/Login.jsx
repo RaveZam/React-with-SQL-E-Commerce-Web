@@ -32,7 +32,7 @@ export default function Login() {
       .then((responce) => {
         console.log(responce);
         if (responce.data.status === "loginsuccess") {
-          navigate("/Hero");
+          navigate("/Mainpage");
           setEmptylogin(false);
           setusernotfound(false);
           setincorrectpassword(false);

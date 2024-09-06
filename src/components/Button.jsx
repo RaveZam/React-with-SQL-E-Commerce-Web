@@ -9,18 +9,21 @@ export default function Button({
   itemimage,
   cartitems,
   addToCartItems,
+  itemprice,
 }) {
-  function buttonclick() {
-    // console.log(itemname);
-    // console.log(itemimage);
-    addToCart({ itemname: itemname, itemimage: itemimage });
-    addToCartItems(cart);
+  function buttonclick(e) {
+    addToCart({
+      itemname: itemname,
+      itemimage: itemimage,
+      itemprice: itemprice,
+    });
+    addToCartItems([...cartitems, cart]);
   }
-  console.log(cartitems.itemname);
+
   return (
     <>
       <button
-        onClick={() => buttonclick()}
+        onClick={(e) => buttonclick(e)}
         className={`${styles.btn} ${uniqueClassname}`}
       >
         {btnmessage}

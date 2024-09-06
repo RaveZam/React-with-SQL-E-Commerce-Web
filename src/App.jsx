@@ -9,29 +9,59 @@ import { BrowserRouter } from "react-router-dom";
 import Hero from "./hero/Hero";
 import Adsbar from "./adsbar/Adsbar";
 import Lampsection from "./lampsection/Lampsection";
+import Mainpage from "./Mainpage";
 
 function App() {
-  const [cart, addToCart] = useState({ itemname: "", itemimage: "" });
   const [cartitems, addToCartItems] = useState([]);
+  let itemname = "Silver effect Cone Light shade (D) 190mm";
+  let itemimage = "./images/lamp1.webp";
+  const itemprice = 6;
+  const [cart, addToCart] = useState({
+    itemname: "",
+    itemimage: "",
+    itemprice: 0,
+  });
   return (
     <>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />
-          <Route path="/Hero" element={<Hero />} />
+          <Route
+            path="/Mainpage"
+            element={
+              <Mainpage
+                cartitems={cartitems}
+                cart={cart}
+                itemprice={itemprice}
+              />
+            }
+          />
+          <Route
+            path="/Itempage"
+            element={
+              <Itempage
+                cartitems={cartitems}
+                addToCartItems={addToCartItems}
+                cart={cart}
+                addToCart={addToCart}
+                itemimage={itemimage}
+                itemname={itemname}
+                itemprice={itemprice}
+              />
+            }
+          />
         </Routes>
-      </BrowserRouter> */}
-
+      </BrowserRouter>
       {/* <Hero />
       <About />
       <Adsbar />
       <Lampsection /> */}
-      <Itempage
+      {/* <Itempage
         cartitems={cartitems}
         addToCartItems={addToCartItems}
         cart={cart}
         addToCart={addToCart}
-      />
+      /> */}
     </>
   );
 }

@@ -5,7 +5,7 @@ export default function Hero() {
   // navigate("/Hero");
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className={styles.hero}>
         <div className={styles.txtcontainer}>
           <h2 className={styles.title1}>Century Modern Chair</h2>
